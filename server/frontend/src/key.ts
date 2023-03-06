@@ -1,0 +1,1 @@
+export const KeyHistory = Symbol()

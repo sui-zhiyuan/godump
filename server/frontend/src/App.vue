@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import TheHistory from './components/TheHistory.vue'
 </script>
 
 <template>
+  <TheHistory class="history" />
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -11,19 +13,33 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+        <RouterLink :to="{ name: 'about' }">About</RouterLink>
       </nav>
     </div>
   </header>
 
-  <RouterView />
+  <RouterView class="view" />
 </template>
 
 <style scoped>
+.history {
+  grid-row: 1;
+  grid-column: 1;
+  width: 12vw;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
+  grid-row: 1;
+  grid-column: 2;
+  width: 30vh;
+}
+
+.view {
+  grid-row: 1;
+  grid-column: 3;
 }
 
 .logo {
