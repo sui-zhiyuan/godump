@@ -1,11 +1,13 @@
 @import './base.css';
 
-#app {
-  max-width: 90vw;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  display: block;
+}
 
-  font-weight: normal;
+#app {
+  width: 95vw;
+  height: 96vh;
+  margin: 2vh 3vw 2vh 2vw;
 }
 
 a,
@@ -18,18 +20,5 @@ a,
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }

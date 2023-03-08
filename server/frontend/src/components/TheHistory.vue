@@ -12,7 +12,7 @@ const model: Model = vue.reactive({
   history: []
 })
 
-router.afterEach((to :RouteLocationNormalized, _from : RouteLocationNormalized) => {
+router.afterEach((to: RouteLocationNormalized, _from: RouteLocationNormalized) => {
   model.history.push(to)
 })
 
@@ -28,7 +28,7 @@ function backone() {
 </script>
 
 <template>
-  <div>
+  <div class="history">
     Hello World History
     <p
       v-for="(location, index) in model.history"
@@ -37,7 +37,7 @@ function backone() {
     >
       {{ location.fullPath }}
     </p>
-    <button @click="backone">back1</button>
+    <button type="button" @click="backone">back1</button>
   </div>
 </template>
 
